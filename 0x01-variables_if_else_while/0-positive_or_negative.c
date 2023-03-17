@@ -1,9 +1,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-/* main - Positive anything is better */
-/* betty style doc for function main goes there */
+
+/**
+ * main - Assign a random number to the variable n each time it is executed
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	int n;
@@ -11,10 +15,10 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-		printf("The number is positive\n");
+		printf("The number %d is positive\n", n);
 	else if (n == 0)
-		printf("The number is zero\n");
+		printf("The number %d is zero\n", n);
 	else
-		printf("The number is negative\n");
+		printf("The number %d is negative\n", n);
 	return (0);
 }
