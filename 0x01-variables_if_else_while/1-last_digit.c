@@ -3,15 +3,16 @@
 #include <stdio.h>
 
 /**
- * main - assign a random number to the variable n each time it is executed
+ * main - print last digit in a random number
+ *
+ * Description - print last digit in number
  *
  * Return - Always 0 (Success)
  */
 
 int main(void)
 {
-	int n;
-	int last;
+	int n, last;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
