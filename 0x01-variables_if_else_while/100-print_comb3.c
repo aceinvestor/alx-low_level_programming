@@ -8,11 +8,15 @@
 int main(void)
 {
 	int x;
+	int y;
 
 	for (x = 1 ; x <= 89 ; x++)
 	{
 		putchar('0' + x / 10);
-		putchar('0' + x % 10);
+		for (y = 1 ; y <= 89 ; y++)
+		{
+			putchar('0' + y % 10);
+		}
 		putchar(',');
 		putchar(' ');
 	}
