@@ -10,15 +10,15 @@ int main(void)
 	int x;
 	int y;
 
-	for (x = 1 ; x <= 89 ; x++)
+	for (x = 0 ; x <= 9 ; x++)
 	{
-		putchar('0' + x / 10);
-		for (y = 1 ; y <= 89 ; y++)
+		for (y = x + 1 ; y <= 9 ; y++)
 		{
-			putchar('0' + y % 10);
+			putchar(x + '0');
+			putchar(y + '0');
+			putchar(',');
+			putchar(' ');
 		}
-		putchar(',');
-		putchar(' ');
 	}
 		putchar('\n');
 	return (0);
