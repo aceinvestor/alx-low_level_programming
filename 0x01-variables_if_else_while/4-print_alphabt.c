@@ -13,7 +13,7 @@ int main(void)
 
 	for (chr = 'a' ; chr <= 'z' ; chr++)
 	{
-		if (chr == 'q')
+		if (chr == 'q' || chr == 'e')
 		{
 			continue;
 		}
