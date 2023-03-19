@@ -22,17 +22,16 @@ int main(void)
 				{
 					if ((c * 10 + d) > (a * 10 + b))
 					{
-						continue;
-					}
-					putchar(a + '0');
-					putchar(b + '0');
-					putchar(' ');
-					putchar(c + '0');
-					putchar(d + '0');
+						putchar(a + '0');
+						putchar(b + '0');
+						putchar(' ');
+						putchar(c + '0');
+						putchar(d + '0');
 					if (a != 9 || b != 8 || c != 9 || d != 9)
 					{
 					putchar(',');
 					putchar(' ');
+					}
 					}
 				}
 			}
