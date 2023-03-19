@@ -20,6 +20,10 @@ int main(void)
 			{
 				for (d = b ; d < 10 ; d++)
 				{
+					if (a == c && b >= d)
+					{
+						continue;
+					}
 					putchar(a + '0');
 					putchar(b + '0');
 					putchar(' ');
