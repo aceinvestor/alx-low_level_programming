@@ -18,6 +18,9 @@ void times_table(void)
 			if (j == 0)
 			{
 				_putchar('0');
+			}
+			else
+			{
 				_putchar(',');
 				_putchar(' ');
 			}
@@ -27,10 +30,16 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(product + '0');
 			}
-			else
+			else if (product < 100)
 			{
 				_putchar(' ');
 				_putchar((product / 10) + '0');
+				_putchar((product % 10) + '0');
+			}
+			else
+			{
+				_putchar((product / 100) + '0');
+				_putchar(((product / 10) % 10) + '0');
 				_putchar((product % 10) + '0');
 			}
 		}
