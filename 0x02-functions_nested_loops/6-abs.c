@@ -9,8 +9,17 @@
  */
 int _abs(int x)
 {
-	for (x = 0 ; x <= 9 ; x++)
-
-	_putchar(x);
+	if (x > 0)
+	{
+		_putchar(x);
+	}
+	else if (x == 0)
+	{
+		_putchar(-x);
+	}
+	else
+	{
+		_putchar(x);
+	}
 	return (0);
 }
