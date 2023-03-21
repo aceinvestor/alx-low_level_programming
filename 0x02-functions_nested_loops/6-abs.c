@@ -9,7 +9,7 @@
  */
 int _abs(int x)
 {
-	if (x == 1)
+	for (x = 1 ; x <= 9 ; x++)
 
 	_putchar(x);
 	return (0);
