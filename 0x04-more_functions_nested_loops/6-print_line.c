@@ -16,9 +16,11 @@ void print_line(int n)
 		if (m > 0)
 		{
 			_putchar('_');
+			_putchar('\n');
 		}
 		else
+		{
 			_putchar('\n');
+		}
 	}
-	_putchar('\n');
 }
