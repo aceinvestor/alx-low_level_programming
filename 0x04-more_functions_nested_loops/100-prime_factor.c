@@ -24,6 +24,7 @@ int main(void)
 			x++;
 		}
 	}
-	printf("largest factor of 612852475143 is: %ld\n", largest_factor);
+	printf("largest factor of 612852475143 is: %ld", largest_factor);
+	printf("\n");
 	return (0);
 }
