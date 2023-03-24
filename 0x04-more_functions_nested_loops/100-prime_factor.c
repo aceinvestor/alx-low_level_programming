@@ -8,23 +8,21 @@
  */
 int main(void)
 {
-	long n = 612852475143;
-	long x = 2;
-	long largest_factor = 0;
+	long int n = 612852475143;
+	long int x = 2;
+	long int l = n;
 
-	while (n != 1)
+	while (l != x)
 	{
-		if (n % x == 0)
+		if (l % x == 0)
 		{
-			largest_factor = x;
-			n /= x;
+			l = l / x;
 		}
 		else
 		{
 			x++;
 		}
 	}
-	printf("largest factor of 612852475143 is: %ld", largest_factor);
-	printf("\n");
+	printf("%li\n", l);
 	return (0);
 }
