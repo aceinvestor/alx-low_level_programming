@@ -11,19 +11,21 @@
 char *cap_string(char *n)
 {
 	int i;
+	int last;
 
-	if (n[0] >= 'a' && n[0] <= 'z')
+	for (i = 0 ; n[i] != '\0' ; i++)
 	{
-		n[0] -= 32;
-	}
-	for (i = 1 ; n[i] != '\0' ; i++)
-	{
-		if (n[i] == ' ' || n[i] == '\t' || n[i] == '\n' || n[i] == ',' ||
-			n[i] == ';' || n[i] == '.' || n[i] == '!' || n[i] == '?' || n[i] == '"' ||
-			n[i] == '(' || n[i] == ')' || n[i] == '{' || n[i] == '}')
+		last = i - 1;
+		if (n[i] >= 'a' && n[i] <= 'z')
 		{
-			i++;
-			if (n[i] >= 'a' && n[i] <= 'z')
+			if (i == 0)
+			{
+				n[i] -= 32;
+			}
+			else if	(n[last] == ' ' || n[last] == '\t' || n[last] == '\n' ||
+				n[last] == ',' || n[last] == ';' || n[last] == '.' || n[last] == '!' ||
+				n[last] == '?' || n[last] == '"' || n[last] == '(' || n[last] == ')'
+				|| n[last] == '{' || n[last] == '}')
 			{
 				n[i] -= 32;
 			}
