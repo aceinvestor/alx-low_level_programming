@@ -20,7 +20,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	st = (char *) malloc(x * sizeof(char));
+	st = (char *) malloc((x + 1) * sizeof(char));
 	if (st == NULL)
 	{
 		return (NULL);
@@ -30,5 +30,6 @@ char *_strdup(char *str)
 		st[i] = str[i];
 	}
 	return (st);
+
 	free(st);
 }
