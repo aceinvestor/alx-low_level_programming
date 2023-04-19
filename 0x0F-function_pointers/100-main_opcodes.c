@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 	bytes = atoi(argv[1]);
-	if (bytes < 0)
+	if (bytes <= 0)
 	{
 		printf("Error\n");
 		exit(2);
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	ptr = (char *)main;
 	for (i = 0; i < bytes; i++)
 	{
-		printf("%02hhx ", ptr[i] & 0xff);
+		printf("%02hhx ", ptr[i]);
 	}
 	printf("\n");
 	return (0);
