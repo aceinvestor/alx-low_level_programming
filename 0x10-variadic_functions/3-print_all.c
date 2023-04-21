@@ -3,7 +3,6 @@
 /**
  * print_all - function that prints anything
  * @format: types of arguments passed to the function
- * Return: void
  */
 void print_all(const char * const format, ...)
 {
@@ -31,14 +30,16 @@ void print_all(const char * const format, ...)
 			case 's':
 				s = va_arg(list, char*);
 				if (s == NULL)
+				{
 					printf("(nil)");
+					return;
+				}
 				printf("%s", s);
 				p = 1;
 				break;
 			default:
 				break;
-		}
-		i++;
+		} i++;
 		if (format[i] && p)
 			printf(", ");
 		p = 0;
