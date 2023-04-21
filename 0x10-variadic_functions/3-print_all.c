@@ -31,8 +31,7 @@ void print_all(const char * const format, ...)
 				s = va_arg(list, char*);
 				if (s == NULL)
 				{
-					printf("(nil)");
-					return;
+					s = ("(nil)");
 				}
 				printf("%s", s);
 				p = 1;
