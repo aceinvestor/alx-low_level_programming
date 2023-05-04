@@ -18,13 +18,13 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		else if (b[i] != '1')
+		else if (b[i] == '1')
 		{
-			sum *= 2;
+			sum = sum * 2 + 1;
 		}
 		else
 		{
-			sum = sum * 2 + 1;
+			sum *= 2;
 		}
 	}
 	return (sum);
